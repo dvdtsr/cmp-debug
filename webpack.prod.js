@@ -24,14 +24,6 @@ module.exports = env => {
             new webpack.optimize.LimitChunkCountPlugin({
               maxChunks: 1
             })
-
-/*
-            new CopyPlugin({
-                patterns: [
-                    { from: path.join(__dirname, 'assets'), to: 'assets' }
-                ]
-            })
-            */
         ]
 
     });

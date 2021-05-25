@@ -6,7 +6,6 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
 const dirStyles = path.join(__dirname, 'styles');
-//const dirAssets = path.join(__dirname, 'assets');
 
 /**
  * Webpack Configuration
@@ -26,7 +25,6 @@ module.exports = env => {
                 dirNode,
                 dirApp,
                 dirStyles,
-                //dirAssets
             ]
         },
 
@@ -35,7 +33,7 @@ module.exports = env => {
 
             new HtmlWebpackPlugin({
                 template: path.join(__dirname, 'index.ejs'),
-                title: 'Webpack Boilerplate'
+                title: 'CMP debug mode'
             }),
 
             new ImageMinimizerPlugin({
@@ -72,50 +70,6 @@ module.exports = env => {
                     }
                 },
 
-                // STYLES
-
-                /*
-                {
-                    test: /\.css$/,
-                    use: [
-                        'style-loader',
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: IS_DEV
-                            }
-                        },
-                    ]
-                },
-                */
-
-                // CSS / SASS
-
-                /*
-                {
-                    test: /\.scss/,
-                    use: [
-                        'style-loader',
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: IS_DEV
-                            }
-                        },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: IS_DEV,
-                                sassOptions: {
-                                    includePaths: [dirAssets]
-                                }
-                            }
-                        }
-                    ]
-                },
-
-                */
-
                 // IMAGES
                 {
                     test: /\.(png|jpe?g|gif)$/i,
@@ -137,9 +91,10 @@ module.exports = env => {
             ]
         },
 
+/*
         optimization: {
             runtimeChunk: 'single'
         }
-
+*/
     };
 };
