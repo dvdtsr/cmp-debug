@@ -6,7 +6,7 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
 const dirStyles = path.join(__dirname, 'styles');
-const dirAssets = path.join(__dirname, 'assets');
+//const dirAssets = path.join(__dirname, 'assets');
 
 /**
  * Webpack Configuration
@@ -26,7 +26,7 @@ module.exports = env => {
                 dirNode,
                 dirApp,
                 dirStyles,
-                dirAssets
+                //dirAssets
             ]
         },
 
@@ -73,6 +73,8 @@ module.exports = env => {
                 },
 
                 // STYLES
+
+                /*
                 {
                     test: /\.css$/,
                     use: [
@@ -85,8 +87,11 @@ module.exports = env => {
                         },
                     ]
                 },
+                */
 
                 // CSS / SASS
+
+                /*
                 {
                     test: /\.scss/,
                     use: [
@@ -108,6 +113,8 @@ module.exports = env => {
                         }
                     ]
                 },
+
+                */
 
                 // IMAGES
                 {
